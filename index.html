@@ -78,7 +78,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="shippingMethod" class="form-label">Rodzaj przesyłki</label>
+                <label class="form-label">Rodzaj przesyłki</label>
                 <div class="d-flex shipping-method-options">
                     <div class="form-check me-3">
                         <input type="radio" class="form-check-input" name="shippingMethod" id="dpd" value="DPD" required>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="paymentMethod" class="form-label">Rodzaj płatności</label>
+                <label class="form-label">Rodzaj płatności</label>
                 <div class="d-flex payment-method-options">
                     <div class="form-check me-3">
                         <input type="radio" class="form-check-input" name="paymentMethod" id="paymentCard" value="karta" required>
@@ -135,7 +135,11 @@
             </div>
             <button type="button" id="fillInvoiceButton" class="btn btn-secondary">Uzupełnij dane do faktury</button>
 
-            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#form-feedback-modal">Wyślij</button>
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#form-feedback-modal">
+                Wyślij
+            </button>
+            <span id="click-count" class="ms-2">Kliknięć: 0</span>
+            
         </form>
     </div>
 </body>

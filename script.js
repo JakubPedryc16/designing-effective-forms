@@ -8,8 +8,11 @@ const clicksInfo = document.getElementById('click-count');
 
 function handleClick() {
     clickCount++;
-    clicksInfo.innerText = clickCount;
+    if (clicksInfo) {
+        clicksInfo.innerText = `Kliknięć: ${clickCount}`;
+    }
 }
+
 
 async function fetchAndFillCountries() {
     try {
@@ -97,6 +100,12 @@ myForm.addEventListener('keydown', (event) => {
         myForm.requestSubmit();
     }
 });
+
+myForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+    myForm.submit(); 
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const vatCheckbox = document.getElementById('vatUE');
